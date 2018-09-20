@@ -48,11 +48,8 @@ public class GenerateAnalyticsReporter {
         List<ExecutableElement> variableElements = new ArrayList<>();
 
         for (Element enclosedElement : elements) {
-            if (enclosedElement.getKind() != ElementKind.METHOD) {
-                //TODO źle bardzo źle... musi byc metoda
-            } else if (!(enclosedElement instanceof ExecutableElement)) {
-                //TODO źle mus byc Variable element
-            } else {
+            if (enclosedElement.getKind() == ElementKind.METHOD
+                    && enclosedElement instanceof ExecutableElement) {
                 variableElements.add((ExecutableElement) enclosedElement);
             }
         }
