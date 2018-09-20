@@ -27,7 +27,7 @@ public class GenerateAnalyticsReporter {
         String name = element.getAnnotation(Reporter.class).name();
         FieldSpec fieldSpec = getFieldCategory(name);
 
-        TypeSpec.Builder builder = TypeSpec.classBuilder(getName(name))
+        TypeSpec.Builder builder = TypeSpec.classBuilder(getName(element.getSimpleName().toString()))
                 .superclass(ClassNameUtils.getAnalyticsReporterBase())
                 .addSuperinterface(ClassName.get(element))
                 .addModifiers(Modifier.PUBLIC)

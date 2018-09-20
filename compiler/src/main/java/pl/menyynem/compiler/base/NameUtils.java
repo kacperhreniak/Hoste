@@ -2,10 +2,9 @@ package pl.menyynem.compiler.base;
 
 public class NameUtils {
 
-    private static final String SUFFIX_ANALYTICS_REPORTER = "$AnalyticsReporter";
+    private static final String PREFIX_ANALYTICS_REPORTER = "Hoste";
 
     public static String getAnalyticsReporter(String className) {
-        return className.substring(0, 1).toUpperCase() + className.substring(1)
-                + SUFFIX_ANALYTICS_REPORTER;
+        return PREFIX_ANALYTICS_REPORTER + className;
     }
 }
