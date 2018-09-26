@@ -33,3 +33,19 @@ public ExampleAnalyticsReporter provideExampleAnalyticsReporter(IEventSender eve
         return new HosteExampleAnalyticsReporter(eventSender);
 }
 ```
+
+```gradle
+    implementation 'com.github.menyyy.Hoste:compiler:0.0.3'
+    implementation 'com.github.menyyy.Hoste:android-heart:0.0.3'
+    annotationProcessor 'com.github.menyyy.Hoste:annotations:0.0.3'
+   ```
+   
+ ```gradle
+   allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+```
